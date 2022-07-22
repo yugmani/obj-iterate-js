@@ -118,6 +118,19 @@ console.log(userEntries);
 ]
 */
 
+console.log('Object.entries().map()');
+Object.entries(user).map((entry) => {
+  let key = entry[0];
+  let value = entry[1];
+
+  console.log(`${key} : ${value}`);
+});
+/*
+name : Joe Biden
+age : 77
+sex : male
+*/
+
 //This returns an array of arrays, with each inner array having the [key, value]. You can use any array method to loop through:
 for (let arr of userEntries) {
   console.log(arr);
@@ -130,6 +143,7 @@ for (let arr of userEntries) {
 */
 
 //We could decide to destructure the array, so we get the key and value:
+console.log('destructured [key value]');
 for (let [key, value] of userEntries) {
   console.log(`${key}: ${value}`);
 }
