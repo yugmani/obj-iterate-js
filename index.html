@@ -1,1 +1,63 @@
-<div id="app"></div>
+<div id="app">
+  <h1>Loop Through an Object in JavaScript</h1>
+  <ul>
+    <li>
+      We can use for... loops, forEach(), map() and other methods to loop
+      through an array in JavaScript.
+    </li>
+    <li>
+      But in the case of ojbects, unfortunately, these methods don't work
+      because objects are not iterable.
+    </li>
+    <li>
+      This doesn't mean we can't loop through an object - but this means that we
+      can't loop through an object directly the same way we do for an array.
+    </li>
+    <li>
+      <h3>How to loop through an object in JavaScript with a for…in loop</h3>
+      <ul>
+        <li>
+          Before ES6, we relied on the for...in method whenever we wanted to
+          loop through an object.
+        </li>
+        <li>
+          The for...in loop iterates through properties in the prototype chain.
+          This means that we need to check if the property belongs to the object
+          using hasOwnProperty whenever we loop through an object with the
+          for…in loop
+        </li>
+        <li>
+          To avoid the stress and difficulty of looping and to use the
+          hasOwnProperty method, ES6 and ES8 introduced object static methods.
+          These convert object properties to arrays, allowing us to use array
+          methods directly.
+        </li>
+      </ul>
+    </li>
+    <li>
+      <h3>
+        How to loop through an object in JavaScript with object static methods?
+      </h3>
+      <ul>
+        <li>
+          An object is made up of properties that have key-value pairs, that is
+          each property always has a corresponding value.
+        </li>
+        <li>
+          Object static methods let us extract either keys(), values(), or both
+          keys and values as entries() in an array, allowing us to have as much
+          flexibility over them as we do with actual arrays.
+        </li>
+        <li>Object.keys()</li>
+        <li>Object.values()</li>
+        <li>Object.entries()</li>
+      </ul>
+    </li>
+  </ul>
+  <p>
+    <a
+      href="https://www.freecodecamp.org/news/how-to-iterate-over-objects-in-javascript/"
+      >How to Iterate Over an Object in JS by Joel Olawanle</a
+    >
+  </p>
+</div>
