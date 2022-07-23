@@ -153,3 +153,56 @@ name: Joe Biden
 age: 77
 sex: male
 */
+
+const users = [
+  {
+    name: 'Joe',
+    age: 20,
+  },
+  {
+    name: 'Doe',
+    age: 73,
+  },
+  {
+    name: 'Yeon',
+    age: 44,
+  },
+  {
+    name: 'Mung',
+    age: 29,
+  },
+  {
+    name: 'Shelly',
+    age: 16,
+  },
+  {
+    name: 'Bob',
+    age: 65,
+  },
+];
+
+//using filter method to list the users who is less than 30 years.
+let youngsters = users.filter((user) => {
+  return user.age < 30;
+});
+
+console.log(youngsters);
+/* 
+[  
+  {  name: 'Joe',  age: 20 },
+  {  name: 'Mung',  age: 29 },
+  {  name: 'Shelly',  age: 16 }
+]
+*/
+
+// using reduce method to calculate average age of users
+let totalAge = users.reduce((total, prev) => {
+  return (total += prev.age);
+}, 0);
+
+console.log(Math.round(totalAge / users.length)); //41
+
+//using map method to find users age after 10 years.
+let ageAfter10 = users.map((user) => user.age + 10);
+
+console.log(ageAfter10); //[30, 83, 54, 39, 26, 75]
